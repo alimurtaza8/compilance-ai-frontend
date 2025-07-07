@@ -29,7 +29,7 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center space-x-4">
               <a href="#" className="flex-shrink-0">
-                <img className="h-10 w-auto" src="/images/logo_2.jpg" alt="Medstore Text Logo" />
+                <img className="h-10 w-auto" src="/images/logo_main.jpg" alt="Medstore Text Logo" />
               </a>
               <a href="#" className="flex-shrink-0">
                 <img className="h-8 w-auto" src="/images/logo_1.jpg" alt="Medstore Shield Logo" />
