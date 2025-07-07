@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -20,9 +19,9 @@ const ContactSection = () => {
       <section id="contact" className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-6 text-blue-600 border-blue-600 px-4 py-2">
+             <Badge variant="outline" className="mb-6 text-blue-600 border-blue-600 px-4 py-2">
               AI World Summit Ready
-            </Badge>
+            </Badge> 
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               Ready to Transform Your Compliance?
             </h2>
@@ -32,109 +31,76 @@ const ContactSection = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 mb-16">
-            {/* Organizations CTA */}
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <CardHeader className="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-t-lg">
-                <CardTitle className="flex items-center text-xl">
-                  <Calendar className="h-6 w-6 mr-3" />
-                  For Organizations
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-8">
-                <div className="mb-6">
-                  <img 
-                    src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=200&fit=crop&crop=center"
-                    alt="Organization team using compliance software"
-                    className="w-full h-32 object-cover rounded-lg mb-4"
-                  />
-                </div>
-                <p className="text-slate-600 mb-6 leading-relaxed">
-                  Ready to get audit-ready in days? Schedule a personalized demo to see 
-                  how AuditPilot™ can transform your compliance process.
-                </p>
-                <Button 
-                  onClick={() => handleButtonClick('demo')}
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold w-full group mb-3"
-                >
-                  <Video className="h-4 w-4 mr-2" />
-                  Schedule Demo
-                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <div className="text-center text-sm text-slate-500">
-                  30-minute consultation • No commitment required
-                </div>
-              </CardContent>
-            </Card>
+          <div className="flex justify-center">
+            <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-4xl">
+              {/* Organizations CTA */}
+              <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <CardHeader className="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-t-lg">
+                  <CardTitle className="flex items-center text-xl">
+                    <Calendar className="h-6 w-6 mr-3" />
+                    For Organizations
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-8">
+                  <div className="mb-6">
+                    <img 
+                      src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=200&fit=crop&crop=center"
+                      alt="Organization team using compliance software"
+                      className="w-full h-32 object-cover rounded-lg mb-4"
+                    />
+                  </div>
+                  <p className="text-slate-600 mb-6 leading-relaxed">
+                    Ready to get audit-ready in days? Schedule a personalized demo to see 
+                    how AuditPilot™ can transform your compliance process.
+                  </p>
+                  <Button 
+                    onClick={() => handleButtonClick('demo')}
+                    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold w-full group mb-3"
+                  >
+                    <Video className="h-4 w-4 mr-2" />
+                    Schedule Demo
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                  <div className="text-center text-sm text-slate-500">
+                    30-minute consultation • No commitment required
+                  </div>
+                </CardContent>
+              </Card>
 
-            {/* Investors CTA */}
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <CardHeader className="bg-gradient-to-br from-green-600 to-green-700 text-white rounded-t-lg">
-                <CardTitle className="flex items-center text-xl">
-                  <DollarSign className="h-6 w-6 mr-3" />
-                  For Investors
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-8">
-                <div className="mb-6">
-                  <img 
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&crop=center"
-                    alt="Investment meeting and business growth"
-                    className="w-full h-32 object-cover rounded-lg mb-4"
-                  />
-                </div>
-                <p className="text-slate-600 mb-6 leading-relaxed">
-                  Interested in the future of AI-native compliance? Learn about our 
-                  $2M-$5M funding round and growth opportunity.
-                </p>
-                <Button 
-                  onClick={() => handleButtonClick('investor')}
-                  className="bg-green-600 hover:bg-green-700 text-white font-semibold w-full group mb-3"
-                >
-                  <MessageSquare className="h-4 w-4 mr-2" />
-                  Investor Inquiry
-                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <div className="text-center text-sm text-slate-500">
-                  Seed/Series A • $2M-$5M target
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Summit CTA */}
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <CardHeader className="bg-gradient-to-br from-purple-600 to-purple-700 text-white rounded-t-lg">
-                <CardTitle className="flex items-center text-xl">
-                  <Users className="h-6 w-6 mr-3" />
-                  AI World Summit
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-8">
-                <div className="mb-6">
-                  <img 
-                    src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=200&fit=crop&crop=center"
-                    alt="AI World Summit conference and networking"
-                    className="w-full h-32 object-cover rounded-lg mb-4"
-                  />
-                </div>
-                <p className="text-slate-600 mb-6 leading-relaxed">
-                  Meeting us at the AI World Summit? Book a dedicated time slot to 
-                  discuss partnerships and collaboration opportunities.
-                </p>
-                <Button 
-                  variant="outline" 
-                  onClick={() => handleButtonClick('summit')}
-                  className="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white w-full group mb-3"
-                >
-                  <Calendar className="h-4 w-4 mr-2" />
-                  Book Summit Meeting
-                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <div className="text-center text-sm text-slate-500">
-                  Exclusive summit appointments available
-                </div>
-              </CardContent>
-            </Card>
+              {/* Investors CTA */}
+              <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <CardHeader className="bg-gradient-to-br from-green-600 to-green-700 text-white rounded-t-lg">
+                  <CardTitle className="flex items-center text-xl">
+                    <DollarSign className="h-6 w-6 mr-3" />
+                    For Investors
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-8">
+                  <div className="mb-6">
+                    <img 
+                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&crop=center"
+                      alt="Investment meeting and business growth"
+                      className="w-full h-32 object-cover rounded-lg mb-4"
+                    />
+                  </div>
+                  <p className="text-slate-600 mb-6 leading-relaxed">
+                    Interested in the future of AI-native compliance? Learn about our 
+                    $2M-$5M funding round and growth opportunity.
+                  </p>
+                  <Button 
+                    onClick={() => handleButtonClick('investor')}
+                    className="bg-green-600 hover:bg-green-700 text-white font-semibold w-full group mb-3"
+                  >
+                    <MessageSquare className="h-4 w-4 mr-2" />
+                    Investor Inquiry
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                  <div className="text-center text-sm text-slate-500">
+                    Seed/Series A • $2M-$5M target
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
           {/* Contact Information */}

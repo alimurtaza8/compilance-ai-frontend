@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -10,6 +9,7 @@ const Header = () => {
   const [modalType, setModalType] = useState<'demo' | 'investor' | 'summit' | 'general'>('demo');
 
   const navLinks = [
+    { href: '/', label: 'Home' },
     { href: '#about', label: 'About' },
     { href: '#product', label: 'AuditPilot™' },
     { href: '#advantages', label: 'Advantages' },
@@ -27,11 +27,13 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="flex items-center">
-              <div className="text-2xl font-bold">
-                <span className="text-slate-900">Medstore</span>
-                <span className="text-blue-600"> Inc.</span>
-              </div>
+            <div className="flex items-center space-x-4">
+              <a href="#" className="flex-shrink-0">
+                <img className="h-10 w-auto" src="/images/logo_2.jpg" alt="Medstore Text Logo" />
+              </a>
+              <a href="#" className="flex-shrink-0">
+                <img className="h-8 w-auto" src="/images/logo_1.jpg" alt="Medstore Shield Logo" />
+              </a>
             </div>
 
             {/* Desktop Navigation */}
