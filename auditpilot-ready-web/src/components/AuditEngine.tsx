@@ -82,7 +82,7 @@ const ComplianceEnginePanel = () => {
     setError('');
     setResult(null);
     try {
-      const response = await fetch('https://ai-compliance-backend-production.up.railway.app/api/analyze_and_score', {
+      const response = await fetch('https://web-production-b250e.up.railway.app/api/analyze_and_score', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ control_id: controlId, evidence, enhancement }),
@@ -94,7 +94,11 @@ const ComplianceEnginePanel = () => {
     } finally {
       setIsLoading(false);
     }
+
   };
+
+
+// http://web-production-b250e.up.railway.app
 
   const loadSample = () => {
       setControlId('AC-6');
@@ -206,7 +210,7 @@ const PredictiveModelingPanel = () => {
             const baseline_scores = convertToBackendFormat(JSON.parse(baselineJson));
             const remediation_plan = convertToBackendFormat(JSON.parse(remediationJson));
 
-            const response = await fetch('https://ai-compliance-backend-production.up.railway.app/api/predictive_modeling', {
+            const response = await fetch('https://web-production-b250e.up.railway.app/api/predictive_modeling', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ baseline_scores, remediation_plan }),
@@ -273,7 +277,7 @@ Timestamp: 3:30 AM - ALERT: The firewall blocked the suspicious data export atte
         setError('');
         setResult(null);
         try {
-            const response = await fetch('https://ai-compliance-backend-production.up.railway.app/api/behavioral_analysis', {
+            const response = await fetch('https://web-production-b250e.up.railway.app/api/behavioral_analysis', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ log_evidence: logEvidence }),
