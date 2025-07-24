@@ -25,6 +25,20 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        compliance: {
+          green: "hsl(var(--compliance-green))",
+          orange: "hsl(var(--compliance-orange))",
+          red: "hsl(var(--compliance-red))",
+          blue: "hsl(var(--compliance-blue))",
+          teal: "hsl(var(--compliance-teal))",
+        },
+        chart: {
+          success: "hsl(var(--chart-success))",
+          warning: "hsl(var(--chart-warning))",
+          danger: "hsl(var(--chart-danger))",
+          info: "hsl(var(--chart-info))",
+          primary: "hsl(var(--chart-primary))",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
