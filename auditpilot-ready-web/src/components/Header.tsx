@@ -34,7 +34,7 @@ const Header = () => {
                 <img className="h-10 w-auto" src="/images/logo_main.jpg" alt="Medstore Text Logo" />
               </Link>
               <Link to="/">
-                <img className="h-8 w-auto" src="/images/logo_1.jpg" alt="Medstore Shield Logo" />
+                <img className="h-8 w-auto" src="/images/audit_logo.jpg" alt="Medstore Shield Logo" />
               </Link>
             </div>
 

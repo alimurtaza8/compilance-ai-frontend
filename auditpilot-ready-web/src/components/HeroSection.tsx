@@ -45,7 +45,7 @@ const HeroSection = () => {
               </h1>
               
               <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-2xl leading-relaxed">
-               The leading Ai power Compliance , AI-powered compliance agent that continuously maps, 
+               The leading AI power Compliance , AI-powered compliance agent that continuously maps, 
                 scores, and generates audit evidence for Medicaid, ACA, and federally funded organizations.
               </p>
 

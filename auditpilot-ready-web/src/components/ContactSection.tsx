@@ -116,7 +116,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-semibold text-slate-900 mb-1">Email</h4>
                     <a href="mailto:Info@medstoreinc.com" className="text-slate-600 hover:text-blue-600">
-                      Info@medstoreinc.com
+                      Info@auditpilot.app
                     </a>
                   </div>
                 </div>
